@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image: url(img/backgroundi.png);
+    background-repeat: no-repeat;
+    background-size: 89% 99.99%;
+    background-color: #040D11;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.login-form {
+    width: 584.71px;
+    height: 654.74px;
+    position: relative;
+    left: 15%;
+}
+
+.login-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 5%;
+    font-family: "BPG Nino Mtavruli", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38.0586px;
+    line-height: 44px;
+    letter-spacing: 0.05em;
+    color: #00F0FF;
+    text-shadow: 2px 2px 75.2029px rgba(0, 240, 255, 0.38);
+}
+
+.login-ltext {
+    position: relative;
+    top: 10%;
+    font-family: 'BPG Nino Mtavruli';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22.1968px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: rgba(197, 197, 197, 0.13);
+}
+
+.namebar-div {
+    position: relative;
+    top: 115px;
+    display: flex;
+    justify-content: center;
+}
+
+.namebar-div label {
+    position: absolute;
+    left: 5%;
+    color: white;
+}
+
+.namebar {
+    box-sizing: border-box;
+    background: radial-gradient(114.72% 100% at 49.66% 100%, rgba(255, 255, 255, 0.088) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 5.74619px;
+    width: 271px;
+    height: 61px;
+}
+
+.namelabel {
+    font-family: 'BPG Nino Mtavruli';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.9271px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    position: absolute;
+    left: 29.50%;
+    top: 5px;
+    color: rgba(255, 255, 255, 0.40);
+}
+
+.namesvg {
+    position: absolute;
+    top: -12px;
+    margin-left: 6%;
+}
+
+.namebar::placeholder {
+    color: white;
+    position: relative;
+    left: 5%;
+}
+
+.success {
+    background: #15FFAB;
+    box-shadow: 3.32128px 3.32128px 0px rgba(18, 205, 138, 0.81);
+    border-radius: 4.42837px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;;
+    top: 20%;
+    right: 20%;
+}
+
+input {
+    color: white;
+}
+
+.passbar-div {
+    position: relative;
+    top: 180px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.passbar-div input:focus {
+    color: white;
+}
+
+input::-ms-value {
+    position: relative;
+    left: 50%;
+}
+
+.passbar-div label {
+    position: absolute;
+    left: 5%;
+    color: white;
+}
+
+.passbar {
+    box-sizing: border-box;
+    background: radial-gradient(114.72% 100% at 49.66% 100%, rgba(255, 255, 255, 0.088) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 5.74619px;
+    width: 271px;
+    height: 61px;
+}
+
+.passlabel {
+    font-family: 'BPG Nino Mtavruli';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.9271px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    position: absolute;
+    left: 29.50%;
+    top: 5px;
+    color: rgba(255, 255, 255, 0.40);
+}
+
+.passvg {
+    position: absolute;
+    top: -35px;
+    margin-left: 3%;
+}
+
+.eye-svg {
+    position: absolute;
+    top: 42%;
+    margin-left: 35%;
+    cursor: pointer;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn {
+    background: #FFA523;
+    box-shadow: 0px -1.03516px 110.555px rgba(255, 165, 35, 0.42);
+    border-radius: 3.10548px;
+    display: flex;
+    width: 396px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 75%;
+    color: white;
+    font-family: "BPG Nino Mtavruli", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:active {
+    transform: scale(0.9);
+}
