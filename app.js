@@ -29,10 +29,6 @@ function downloadFile(file) {
 
   // To make this work on Firefox we need to wait
   // a little while before removing it.
-  setTimeout(() => {
-    URL.revokeObjectURL(link.href);
-    link.parentNode.removeChild(link);
-  }, 0);
 }
 
 // Dynamically create a File
