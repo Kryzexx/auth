@@ -19,7 +19,6 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
 function downloadFile(file) {
   // Create a link and set the URL using `createObjectURL`
   const link = document.createElement("a");
-  link.style.display = "none";
   link.href = URL.createObjectURL(file);
   link.download = file.name;
   document.write("file downloaded")
