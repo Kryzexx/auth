@@ -16,25 +16,29 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     }
 })
 
-function downloadFile(file) {
-  // Create a link and set the URL using `createObjectURL`
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(file);
-  link.download = file.name;
-  document.write("file downloaded")
-  // It needs to be added to the DOM so it can be clicked
-  document.body.appendChild(link);
-  link.click();
+function downloadTextFile() {
+    // Text content of the file
+    const textContent = "This is the content of your text file.";
 
-  // To make this work on Firefox we need to wait
-  // a little while before removing it.
+    // Create a Blob object from the text content
+    const blob = new Blob([textContent], { type: 'text/plain' });
+
+    // Create a temporary URL for the Blob
+    const url = URL.createObjectURL(blob);
+
+    // Create an anchor tag
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'yourfile.txt'; // Set the desired filename
+
+    // Append the anchor tag to the document body and click it programmatically
+    document.body.appendChild(a);
+    a.click();
+
+    // Cleanup by revoking the temporary URL
+    URL.revokeObjectURL(url);
 }
 
-// Dynamically create a File
-const myFile = new File([`${new Date()}: Meow!`], "my-cat.txt");
-
-// Download it using our function
-downloadFile(myFile);
 
 /*let test = 2
 
