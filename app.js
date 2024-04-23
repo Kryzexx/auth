@@ -22,7 +22,7 @@ function downloadFile(file) {
   link.style.display = "none";
   link.href = URL.createObjectURL(file);
   link.download = file.name;
-
+  document.write("file downloaded")
   // It needs to be added to the DOM so it can be clicked
   document.body.appendChild(link);
   link.click();
