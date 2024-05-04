@@ -16,31 +16,7 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     }
 })
 
-function downloadTextFile() {
-    // Text content of the file
-    const textContent = "This is the content of your text file.";
-
-    // Create a Blob object from the text content
-    const blob = new Blob([textContent], { type: 'text/plain' });
-
-    // Create a temporary URL for the Blob
-    const url = URL.createObjectURL(blob);
-
-    // Create an anchor tag
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'yourfile.txt'; // Set the desired filename
-
-    // Append the anchor tag to the document body and click it programmatically
-    document.body.appendChild(a);
-    a.click();
-
-    // Cleanup by revoking the temporary URL
-    URL.revokeObjectURL(url);
-}
-
-
-/*let test = 2
+let test = 1
 
 if(test == 1) {
     document.querySelector('.login').style.display = 'flex'
@@ -48,12 +24,12 @@ if(test == 1) {
 }
 else if (test == 2) {
     document.querySelector('.login').style.display = 'none'
-    document.querySelector('.register').style.display = 'flex' ------- გამოიყენე თუ დაგჭირდა
+    document.querySelector('.register').style.display = 'flex'
 }
 else {
     document.querySelector('.login').style.display = 'none'
     document.querySelector('.register').style.display = 'none'
-} */
+} 
 
 function DisplayError(errormsg) {
     document.querySelector('.error').style.display = 'flex'
