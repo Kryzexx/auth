@@ -16,7 +16,7 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     }
 })
 
-let test = 1
+let test = 2
 
 if(test == 1) {
     document.querySelector('.login').style.display = 'flex'
