@@ -3,14 +3,27 @@
     margin: 0;
 }
 
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bg-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-image: url(img/backgroundi.png);
     background-repeat: no-repeat;
     background-size: 89% 99.99%;
     background-color: #040D11;
+    overflow: hidden;
 }
 
 .login {
@@ -25,7 +38,7 @@ body {
     width: 584.71px;
     height: 654.74px;
     position: relative;
-    left: 15%;
+    left: 20%;
 }
 
 .login-text {
@@ -227,7 +240,7 @@ input::-ms-value {
     width: 584.71px;
     height: 654.74px;
     position: relative;
-    left: 15%;
+    left: 20%;
     bottom: 5%;
 }
 
