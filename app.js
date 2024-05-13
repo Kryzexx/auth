@@ -69,7 +69,7 @@ logbtn.addEventListener('click', () => {
 })
 
 
-// თუ პაროლი არასწორია პავნოდან უბრალოდ დააემიტე "pwd:wrongpass"
+// თუ პაროლი არასწორია პავნოდან უბრალოდ დააემიტე "data:pool:wrongpass"
 cef.on('data:pool:wrongpass', () => {
     return DisplayError('პაროლი არასწორია')
 })
