@@ -1,4 +1,5 @@
 let password = document.querySelector(".passbar")
+let name = document.querySelector(".namebar")
 
 document.querySelector('.eye-svg').addEventListener('click', () => {
     if(password.type == 'password') {
@@ -19,14 +20,18 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     }
     else {
         // - success, ამას რო მიიღებ მერე უკვე სქესი და რეებიცაა, ამ CEF'ს destroybrowser-ი უქენი
-        cef.emit('pwd:sucreg')
+        cef.emit('data:pool:sucreg')
     }
+})
+
+cef.on("data:pool:getname" (newname) => {
+    name.placeholder = newname
 })
 
 /* -- თუ უკვე რეგისტრირებულია, Response სახით დააბრუნე 1 ხოლო თუ არაა დააბრუნე 2;
 1 = Log In
 2 = Register */
-cef.on('pwd:login', (response) => { 
+cef.on('data:pool:auth', (response) => { 
     if(response == 1) {
         document.querySelector('.login').style.display = 'flex'
         document.querySelector('.register').style.display = 'none'
@@ -60,11 +65,11 @@ logbtn.addEventListener('click', () => {
     if(password.value == '') {
         DisplayError('შეიყვანეთ პაროლი')
     }
-    cef.emit('pwd:logpass', password.value)
+    cef.emit('data:pool:getpass', password.value)
 })
 
 
 // თუ პაროლი არასწორია პავნოდან უბრალოდ დააემიტე "pwd:wrongpass"
-cef.on('pwd:wrongpass', () => {
+cef.on('data:pool:wrongpass', () => {
     return DisplayError('პაროლი არასწორია')
 })
