@@ -24,11 +24,13 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
 })
 
 let authname = document.querySelector("#namebar1")
+cef.emit("data:pool:authname");
 cef.on("data:pool:authname", (newname) => {
     authname.placeholder = `${newname}`
 })
 
 let regname = document.querySelector("#namebar2")
+cef.emit("data:pool:regname")
 cef.on("data:pool:regname", (newname) => {
     regname.placeholder = `${newname}`
 })
