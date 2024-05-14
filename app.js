@@ -25,8 +25,8 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     }
 })
 
-cef.on("data:pool:getname", (newname) => {
-    name.placeholder = `${newname}`
+cef.on("data:pool:test", (newname) => {
+    document.querySelector('#pass1').value = "asdme"
 })
 
 /* -- თუ უკვე რეგისტრირებულია, Response სახით დააბრუნე 1 ხოლო თუ არაა დააბრუნე 2;
