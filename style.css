@@ -8,7 +8,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display:none;
 }
 
 .bg-img img{
@@ -22,7 +21,7 @@ body {
     height: 100vh;
     display: flex;
     background-repeat: no-repeat;
-    background-size: 89% 99.99%;/* #040D11 */
+    background-size: 89% 99.99;
     overflow: hidden;
 }
 
