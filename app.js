@@ -1,13 +1,5 @@
-let password = document.querySelector("passbar")
+let password = document.querySelector(".passbar")
 let name = document.querySelector(".namebar")
-
-cef.on("data:test", (test) => {
-    document.write(test)
-    document.write(test)
-    document.write(test)
-    document.write(test)
-    document.write(test)
-})
 
 document.querySelector('.eye-svg').addEventListener('click', () => {
     if(password.type == 'password') {
@@ -29,6 +21,7 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     else {
         // - success, ამას რო მიიღებ მერე უკვე სქესი და რეებიცაა, ამ CEF'ს destroybrowser-ი უქენი
         cef.emit('data:pool:sucreg')
+        document.querySelector("bg-img").style.dispaly = "none"
     }
 })
 
