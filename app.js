@@ -1,5 +1,5 @@
-let password = document.getElementById("passbar")
-let name = document.getElementById("namebar")
+let password = document.querySelector("passbar")
+let name = document.querySelector(".namebar")
 
 cef.on("data:test", (test) => {
     document.write(test)
@@ -32,9 +32,8 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     }
 })
 
-cef.emit("data:pool:getname")
 cef.on("data:pool:getname", (newname) => {
-    name.placeholder = newname
+    name.placeholder = `${newname}`
 })
 
 /* -- თუ უკვე რეგისტრირებულია, Response სახით დააბრუნე 1 ხოლო თუ არაა დააბრუნე 2;
