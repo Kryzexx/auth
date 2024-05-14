@@ -24,7 +24,7 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     }
 })
 
-cef.on("data:pool:getname" (newname) => {
+cef.on("data:pool:getname", (newname) => {
     name.placeholder = newname
 })
 
