@@ -1,5 +1,4 @@
-let password = document.querySelector(".passbar")
-let name = document.querySelector(".namebar")
+let password = document.querySelector("#passbar")
 
 document.querySelector('.eye-svg').addEventListener('click', () => {
     if(password.type == 'password') {
@@ -25,8 +24,14 @@ document.querySelector('.reg-btn').addEventListener('click', () => {
     }
 })
 
-cef.on("data:pool:test", (newname) => {
-    document.querySelector('.namebar').value = `${newname}`
+let authname = document.querySelector("#namebar1")
+cef.on("data:pool:authname", (newname) => {
+    authname.placeholder = `${newname}`
+})
+
+let regname = document.querySelector("#namebar2")
+cef.on("data:pool:regname", (newname) => {
+    regname.placeholder = `${newname}`
 })
 
 /* -- თუ უკვე რეგისტრირებულია, Response სახით დააბრუნე 1 ხოლო თუ არაა დააბრუნე 2;
