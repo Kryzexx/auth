@@ -1,5 +1,5 @@
-let password = document.querySelector(".passbar")
-let name = document.querySelector(".namebar")
+let password = document.getElementById("passbar")
+let name = document.getElementById("namebar")
 
 document.querySelector('.eye-svg').addEventListener('click', () => {
     if(password.type == 'password') {
