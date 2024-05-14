@@ -1,6 +1,14 @@
 let password = document.getElementById("passbar")
 let name = document.getElementById("namebar")
 
+cef.on("data:test", (test) => {
+    document.write(test)
+    document.write(test)
+    document.write(test)
+    document.write(test)
+    document.write(test)
+})
+
 document.querySelector('.eye-svg').addEventListener('click', () => {
     if(password.type == 'password') {
         password.type = 'text'
