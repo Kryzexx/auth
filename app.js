@@ -44,15 +44,10 @@ cef.on('data:pool:auth', (response) => {
         document.querySelector('.login').style.display = 'flex'
         document.querySelector('.register').style.display = 'none'
     }
-    else if (response == 2) {
+    else {
         document.querySelector('.login').style.display = 'none'
         document.querySelector('.register').style.display = 'flex'
     }
-    else {
-        document.querySelector('.login').style.display = 'none'
-        document.querySelector('.register').style.display = 'none'
-    } 
-    
 }) 
 
 // depiction of error
