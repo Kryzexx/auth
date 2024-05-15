@@ -38,6 +38,7 @@ cef.on("data:pool:regname", (newname) => {
 /* -- თუ უკვე რეგისტრირებულია, Response სახით დააბრუნე 1 ხოლო თუ არაა დააბრუნე 2;
 1 = Log In
 2 = Register */
+cef.emit("data:pool:auth");
 cef.on('data:pool:auth', (response) => { 
     if(response == 1) {
         document.querySelector('.login').style.display = 'flex'
