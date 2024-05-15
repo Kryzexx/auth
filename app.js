@@ -40,7 +40,7 @@ cef.on("data:pool:regname", (newname) => {
 2 = Register */
 cef.emit("data:pool:auth");
 cef.on('data:pool:auth', (response) => { 
-    if(response == "1") {
+    if(response == 1) {
         document.querySelector('.login').style.display = 'flex'
         document.querySelector('.register').style.display = 'none'
     }
